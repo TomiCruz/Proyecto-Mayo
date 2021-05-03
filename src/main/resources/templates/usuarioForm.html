@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+<meta charset="ISO-8859-1">
+<title>Formulario Usuarios</title>
+
+</head>
+
+<link th:rel="stylesheet" type="text/css"
+	th:href="@{webjars/bootstrap/4.5.0/css/bootstrap.min.css}" />
+
+
+<link th:rel="stylesheet"
+	th:href="@{webjars/font-awesome/5.11.2/css/all.css}" />
+
+
+<script th:src="@{/webjars/jquery/3.5.1/jquery.min.js}"
+	type="text/javascript" src="webjars/jquery/3.5.1/jquery.min.js"></script>
+<script th:src="@{/webjars/popper.js/1.16.0/popper.min.js}"
+	type="text/javascript" src="webjars/popper.js/1.16.0/popper.min.js"></script>
+<script th:src="@{/webjars/bootstrap/4.5.0/js/bootstrap.min.js}"
+	type="text/javascript"
+	src="webjars/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+
+
+
+
+<script type="text/javascript"
+	src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript"
+	src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+<script type="text/javascript"
+	src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/js/tempusdominus-bootstrap-4.min.js"></script>
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/css/tempusdominus-bootstrap-4.min.css" />
+
+<link rel="stylesheet" type="text/css"
+	href="lib/datetimepicker/tempusdominus-bootstrap-4.min.css">
+<script type="text/javascript"
+	src="lib/datetimepicker/tempusdominus-bootstrap-4.min.js"></script>
+
+
+
+
+<body>
+	<div class="container">
+		<ul class="nav nav-tabs" role="tablist">
+			<li class="nav-item"><a id="formulario-tab"
+				class="nav-link active" href="#formulario" data-toggle="tab"
+				role="tab" aria-controls="formulario" aria-selected="true">Formulario</a>
+			</li>
+			<li class="nav-item"><a id="lista-tab" class="nav-link"
+				href="#lista" data-toggle="tab" role="tab" aria-controls="lista"
+				aria-selected="false">Lista</a></li>
+		</ul>
+
+
+		<div class="tab-content">
+			<div class="tab-pane fade show active" id="formulario"
+				role="tabpanel" aria-labelledby="formulario-tab">
+				<div class="card">
+					<div class="card-header">
+						<h4>Usuario</h4>
+						<div class="card-body">
+							<form class="form" role="form" autocomplete="off" method="post">
+								<div class="row">
+									<div class="col">
+										<div class="form-group row">
+											<label class="col-lg-3 col-form-label form-control-label">Apellido</label>
+											<div class="col-lg-9">
+												<input class="form-control" type="text">
+											</div>
+										</div>
+
+										<div class="form-group row">
+											<label class="col-lg-3 col-form-label form-control-label">Direccion</label>
+											<div class="col-lg-9">
+												<input class="form-control" type="text">
+											</div>
+										</div>
+
+										<div class="form-group row">
+											<label class="col-lg-3 col-form-label form-control-label">DNI</label>
+											<div class="col-lg-9">
+												<input class="form-control" type="text">
+											</div>
+										</div>
+
+										<div class="form-group row">
+											<label class="col-lg-3 col-form-label form-control-label">Contraseña</label>
+											<div class="col-lg-9">
+												<input class="form-control" type="password">
+											</div>
+										</div>
+									</div>
+
+									<div class="col">
+										<div class="form-group row">
+											<label class="col-lg-3 col-form-label form-control-label">Nombre</label>
+											<div class="col-lg-9">
+												<input class="form-control" type="text">
+											</div>
+										</div>
+
+										<div class="form-group row">
+											<label for="fecha"
+												class="col-lg-3 col-form-label form-control-label">Fecha
+												Nac:</label>
+											<div class="col-lg-9 input-group date" id="datetimepicker1"
+												data-toggle-input="nearest">
+												<input class="form-control datetimepicker-input"
+													data-target="#datetimepicker1" id="fecha"
+													placeholder="Fecha" type="text">
+												<div class="input-group-append"
+													data-target="#datetimepicker1" data-toggle="datetimepicker">
+													<div class="input-group-text">
+														<i class="fa fa-calendar-alt"></i>
+													</div>
+
+												</div>
+											</div>
+										</div>
+
+
+
+										<div class="form-group row">
+											<label for="fecha"
+												class="col-lg-3 col-form-label form-control-label">Fecha
+												Nac:</label>
+											<div class="col-lg-9 input-group date" id="datetimepicker2"
+												data-toggle-input="nearest">
+												<input class="form-control datetimepicker-input"
+													data-target="#datetimepicker2" id="fecha"
+													placeholder="Fecha" type="text">
+												<div class="input-group-append"
+													data-target="#datetimepicker2" data-toggle="datetimepicker">
+													<div class="input-group-text">
+														<i class="fa fa-calendar-alt"></i>
+													</div>
+
+												</div>
+											</div>
+										</div>
+
+										<script type="text/javascript"></script>
+
+
+
+										<div class="form-group row">
+											<label class="col-lg-3 col-form-label form-control-label">Tipo:</label>
+											<div class="col-lg-9">
+												<div class="form-check">
+													<input class="form-chek-input" type="radio"
+														name="gridRadios1" id="gridRadio"> <label
+														class="form-chek-input" for="gridRadios1">SOCIO</label>
+												</div>
+												<div class="form-check">
+													<input class="form-chek-input" type="radio"
+														name="gridRadios1" id="gridRadio"> <label
+														class="form-chek-input" for="gridRadios1">ADMIN</label>
+												</div>
+												<div class="form-check">
+													<input class="form-chek-input" type="radio"
+														name="gridRadios1" id="gridRadio"> <label
+														class="form-chek-input" for="gridRadios1">CONSULTOR</label>
+												</div>
+
+											</div>
+										</div>
+
+
+									</div>
+																	
+
+								</div>
+								
+								<div class="form-group row">
+									<div class="col-lg-12 text-center">
+										<a class="btn btn-secondary"
+											th:href="@{‘formularioUsuario/Cancelar’}">Cancelar</a> <input    
+											type="submit" class="btn btn-secondary" value="Save Changes"
+											th:value="${editMode}?'Guardar Usuario':'Crear'">
+									</div>
+								</div>
+								<div class="alert-danger text-center"
+								th:if="${formUsuarioErrorMessage}" 
+								th:text="${formUsuarioErrorMessage}">Name Eror</div>
+								
+								</form>	
+
+							
+						</div>
+
+					</div>
+				</div>
+
+</div>
+			
+
+				<div class="tab-pane fade" id="lista" role="tabpanel"
+					aria-labelledby="lista-tab">
+					<div class="card">
+						<div class="card-header">
+							<h4>Listado de Usuarios</h4>
+						</div>
+						<div class="card-body">
+							<table id="userList"
+								class="table table-bordered table-hover table-striped">
+								<thead class="thead-dark">
+									<tr>
+										<!--<th scope="col">#</th> -->
+										<th scope="col">ID</th>
+										<th scope="col">Apellido</th>
+										<th scope="col">Nombre</th>
+										<th scope="col">Email</th>
+										<th scope="col">DNI</th>
+										<th scope="col">Fecha Nac</th>
+										<th scope="col">Sexo</th>
+										<th scope="col">Editar</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<!--<th scope="row">1</th> -->
+										<td>325</td>
+										<td>Julio</td>
+										<td>manuel</td>
+										<td>tomimo</td>
+										<td>14 hs</td>
+
+									</tr>
+									<tr>
+										<td>325</td>
+										<td>Julio</td>
+										<td>manuel</td>
+										<td>tomim</td>
+										<td>14 hs</td>
+									</tr>
+
+								</tbody>
+
+
+							</table>
+
+						</div>
+
+					</div>
+
+
+
+				</div>
+
+
+			
+		</div>
+	</div>
+
+
+</body>
+
+</html>
